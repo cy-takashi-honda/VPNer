@@ -1,0 +1,21 @@
+tell application "System Events"
+    --現在focusされているApplicationの名前を取得
+    set theName to name of the first process whose frontmost is true
+end tell
+
+tell application "System Events"
+    tell current location of network preferences
+        set VPNservice to service "VPN (test)" -- name of the VPN service
+        set isConnected to connected of current configuration of VPNservice
+        if isConnected then
+            disconnect VPNservice
+        else
+            connect VPNservice
+        end if
+    end tell
+end tell
+
+tell application theName
+    --現在選択されているApplicationにfocus
+    activate
+end tell
