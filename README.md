@@ -1,13 +1,13 @@
 # VPNer
 ## 0. AppleScriptからアプリケーションを実行する準備
-  システム環境設定>アクセシビリティ
-  補助装置にアクセスできるようにする をチェック
+  システム環境設定>アクセシビリティ  
+  `補助装置にアクセスできるようにする` をチェック  
 
 ## 1. Automatorに新しいAppleScriptを記述する
-  ファイル>新規
-  ライブラリ>AppleScriptを実行
-  「サービスは以下の項目を受け取ります」=>"入力なし"
-  「検索対象」=>"すべてのアプリケーション"
+  ファイル>新規  
+  ライブラリ>AppleScriptを実行  
+  「サービスは以下の項目を受け取ります」=>"入力なし"  
+  「検索対象」=>"すべてのアプリケーション"  
   コードに以下を記述
     tell application "System Events"
         --現在focusされているApplicationの名前を取得
@@ -37,8 +37,8 @@
     end tell
 
 ## 3. ショートカットキーの設定
-  システム環境設定>キーボード>キーボードショートカット
-  最下部の"一般"の項目からAutomatorのworkflowファイル名に適当なショートカットを入れる
+  システム環境設定>キーボード>キーボードショートカット  
+  最下部の`一般`の項目からAutomatorのworkflowファイル名に適当なショートカットを入れる  
 
 ## 4. 実際に動くコード
     tell application "System Events"
@@ -60,5 +60,5 @@
 
     tell application theName
         --現在選択されているApplicationにfocus activate
-    end tell
+    end tell  
   このコードを0 ~ 3の手順で設定する
