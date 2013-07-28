@@ -8,7 +8,7 @@
   ライブラリ>AppleScriptを実行  
   「サービスは以下の項目を受け取ります」=>"入力なし"  
   「検索対象」=>"すべてのアプリケーション"  
-  コードに以下を記述
+  コードに以下を記述  
     tell application "System Events"
         --現在focusされているApplicationの名前を取得
         set theName to name of the first process whose frontmost is true
@@ -59,6 +59,7 @@
     end tell
 
     tell application theName
-        --現在選択されているApplicationにfocus activate
+        --現在選択されているApplicationにfocus
+        activate
     end tell  
   このコードを0 ~ 3の手順で設定する
