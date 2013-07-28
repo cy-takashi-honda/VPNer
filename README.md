@@ -9,6 +9,7 @@
   「サービスは以下の項目を受け取ります」=>"入力なし"  
   「検索対象」=>"すべてのアプリケーション"  
   コードに以下を記述  
+    
     tell application "System Events"
         --現在focusされているApplicationの名前を取得
         set theName to name of the first process whose frontmost is true
